@@ -1,5 +1,7 @@
 import sys
 import time
+import random
+
 
 import win32api
 import win32gui
@@ -39,4 +41,6 @@ if handle is None:
 while True:
     sendKeys(handle)
     time.sleep(float(sys.argv[1]))
+    # sleep some more, so we're more realistic!
+    time.sleep(random.random() / 2)
 
